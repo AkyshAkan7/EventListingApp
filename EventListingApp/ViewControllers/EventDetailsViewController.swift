@@ -21,6 +21,7 @@ class EventDetailsViewController: UIViewController {
     
     var cellValue: Event! = nil
     var cellIndex: Int = 0
+    var isFavouriteEvent: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,7 @@ class EventDetailsViewController: UIViewController {
     
     
     func setupView(event: Event) {
-        if cellValue == EventManager.instance.favouriteEvents[cellIndex] {
+        if isFavouriteEvent == true {
             setFavouriteButton.isHidden = true
         }
         

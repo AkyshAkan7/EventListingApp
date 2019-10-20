@@ -32,6 +32,7 @@ class FavouriteViewController: UITableViewController {
             if let viewController = segue.destination as? EventDetailsViewController, let index = tableView.indexPathForSelectedRow?.row {
                 viewController.cellValue = EventManager.instance.favouriteEvents[index]
                 viewController.cellIndex = index
+                viewController.isFavouriteEvent = true
             }
         }
     }
