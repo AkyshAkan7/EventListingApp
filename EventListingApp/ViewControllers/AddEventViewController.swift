@@ -10,23 +10,28 @@ import UIKit
 
 class AddEventViewController: UIViewController {
     
+    // MARK: - Outlets
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var eventNameTextField: UITextField!
-    @IBOutlet weak var eventPlaceLabel: UITextField!
-    @IBOutlet weak var eventDateLabel: UITextField!
+    @IBOutlet weak var eventPlaceTextField: UITextField!
+    @IBOutlet weak var eventDateTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        eventNameTextField.delegate = self
+        eventDateTextField.delegate = self
+        eventPlaceTextField.delegate = self
         
         setupView()
     }
     
+    // MARK: - Actions
     @IBAction func saveEvent(_ sender: Any) {
         
-        if let name = eventNameTextField.text,let description = descriptionTextView.text, let place = eventPlaceLabel.text,
-            let date = eventDateLabel.text, let category = categoryButton.titleLabel?.text {
+        if let name = eventNameTextField.text,let description = descriptionTextView.text, let place = eventPlaceTextField.text,
+            let date = eventDateTextField.text, let category = categoryButton.titleLabel?.text {
             EventManager.instance.events.append(Event(name: name, description: description, place: place, date: date, category: Category(name: category)))
             UserDefaults.standard.set(try? PropertyListEncoder().encode(EventManager.instance.events), forKey: "events")
         }
@@ -70,6 +75,7 @@ class AddEventViewController: UIViewController {
         present(actionSheet, animated: true, completion: nil)
     }
     
+    // MARK: - Methods or functions
     func setupView() {
         descriptionTextView.layer.borderWidth = 1
         descriptionTextView.layer.cornerRadius = 8
@@ -88,4 +94,15 @@ class AddEventViewController: UIViewController {
         saveButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
     }
 
+}
+
+// MARK: - Delegates
+
+extension AddEventViewController: UITextFieldDelegate, UITextViewDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        eventNameTextField.resignFirstResponder()
+        eventDateTextField.resignFirstResponder()
+        eventPlaceTextField.resignFirstResponder()
+        return true
+    }
 }

@@ -59,6 +59,8 @@ class EventDetailsViewController: UIViewController {
     
     
     func setupView(event: Event) {
+        
+        
         if isFavouriteEvent == true {
             setFavouriteButton.isHidden = true
         }
