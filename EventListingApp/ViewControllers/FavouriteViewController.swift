@@ -12,19 +12,13 @@ class FavouriteViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+        UserDefault.loadData(key: "favouriteEvents")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         tableView.reloadData()
-    }
-    
-    func loadData() {
-        if let data = UserDefaults.standard.value(forKey: "favouriteEvents") as? Data {
-            EventManager.instance.favouriteEvents = try! PropertyListDecoder().decode(Array<Event>.self, from: data)
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

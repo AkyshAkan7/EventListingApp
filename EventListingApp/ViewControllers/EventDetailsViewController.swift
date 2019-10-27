@@ -53,8 +53,8 @@ class EventDetailsViewController: UIViewController {
             EventManager.instance.favouriteEvents.append(EventManager.instance.events[cellIndex])
         }
         
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(EventManager.instance.events), forKey: "events")
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(EventManager.instance.favouriteEvents), forKey: "favouriteEvents")
+        UserDefault.saveData(key: "events")
+        UserDefault.saveData(key: "favouriteEvents")
     }
     
     
@@ -65,17 +65,9 @@ class EventDetailsViewController: UIViewController {
             setFavouriteButton.isHidden = true
         }
         
-        backgroundView.layer.cornerRadius = 8
-        backgroundView.layer.shadowOpacity = 1
-        backgroundView.layer.shadowRadius = 10
-        backgroundView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        backgroundView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        ViewController.setupViewLayer(view: backgroundView, cornerRadius: 8, shadowOpacity: 1, shadowRadius: 10, shadowOffset: CGSize(width: 0, height: 0), shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor)
         
-        setFavouriteButton.layer.cornerRadius = 7
-        setFavouriteButton.layer.shadowOpacity = 1
-        setFavouriteButton.layer.shadowRadius = 5
-        setFavouriteButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        setFavouriteButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        ViewController.setupViewLayer(view: setFavouriteButton, cornerRadius: 7, shadowOpacity: 1, shadowRadius: 5, shadowOffset: CGSize(width: 0, height: 0), shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor)
         
         switch event.isFavourite {
         case true:
@@ -85,14 +77,14 @@ class EventDetailsViewController: UIViewController {
         }
         
         switch event.category.name {
-        case "Entertainment":
-            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.5818524957, blue: 0.576875627, alpha: 1)
-        case "Music":
-            backgroundView.backgroundColor = #colorLiteral(red: 0.5117003918, green: 0.8113348484, blue: 0.6468709111, alpha: 1)
-        case "Exhibition":
-            backgroundView.backgroundColor = #colorLiteral(red: 0.572827816, green: 0.7682645917, blue: 1, alpha: 1)
-        case "Sport":
-            backgroundView.backgroundColor = #colorLiteral(red: 0.6911192536, green: 0.5721891522, blue: 1, alpha: 1)
+        case CategoryType.Entertainment.value():
+            backgroundView.backgroundColor = UIColor(named: "Pink")
+        case CategoryType.Music.value():
+            backgroundView.backgroundColor = UIColor(named: "Green")
+        case CategoryType.Exhibition.value():
+            backgroundView.backgroundColor = UIColor(named: "Blue")
+        case CategoryType.Sport.value():
+            backgroundView.backgroundColor = UIColor(named: "Purple")
         default:
             backgroundView.backgroundColor = .gray
         }

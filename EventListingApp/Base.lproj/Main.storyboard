@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,7 +64,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="j2R-yW-36i" firstAttribute="top" secondItem="pON-mX-roC" secondAttribute="bottom" constant="5" id="2JY-U4-5Gc"/>
                                                 <constraint firstItem="pON-mX-roC" firstAttribute="top" secondItem="xeV-zJ-15Z" secondAttribute="top" constant="14" id="2eS-Jb-0Jv"/>
@@ -173,7 +174,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="ntj-Nn-fF4" secondAttribute="bottom" constant="12" id="8rl-iP-UYA"/>
                                                 <constraint firstAttribute="trailing" secondItem="u0F-50-sbU" secondAttribute="trailing" constant="6" id="FCg-U1-Ekn"/>
@@ -276,7 +277,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VV-r0-hV9">
                                 <rect key="frame" x="16" y="599" width="343" height="52"/>
-                                <color key="backgroundColor" red="1" green="0.55816155670000001" blue="0.54849582910000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Pink"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="a4r-n2-ZKA"/>
                                 </constraints>
@@ -368,7 +369,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyb-pZ-661">
                                 <rect key="frame" x="16" y="599" width="343" height="52"/>
-                                <color key="backgroundColor" red="1" green="0.56205040220000002" blue="0.55669623609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Pink"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Vso-oN-ULh"/>
                                 </constraints>
@@ -417,7 +418,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="w7r-6Y-gSy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F3N-TT-0gx" secondAttribute="trailing" constant="8" symbolic="YES" id="2hk-og-5zf"/>
                                     <constraint firstItem="abS-ye-DOK" firstAttribute="leading" secondItem="PxI-eM-Fek" secondAttribute="leading" constant="18" id="6uX-3P-jbG"/>
@@ -484,6 +485,9 @@
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="64" height="58"/>
+        <namedColor name="Pink">
+            <color red="1" green="0.58185249569999997" blue="0.57687562699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qtT-Vw-MOJ"/>

@@ -18,3 +18,14 @@ extension Category: Equatable {
             lhs.name == rhs.name
     }
 }
+
+enum CategoryType: String {
+    case Entertainment
+    case Sport
+    case Exhibition
+    case Music
+    
+    func value() -> String {
+        return self.rawValue
+    }
+}

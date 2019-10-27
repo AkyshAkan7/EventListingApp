@@ -13,7 +13,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadData()
+        UserDefault.loadData(key: "events")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -22,11 +22,12 @@ class ViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func loadData() {
-        if let data = UserDefaults.standard.value(forKey: "events") as? Data {
-            EventManager.instance.events = try! PropertyListDecoder().decode(Array<Event>.self, from: data)
-        }
-        
+    static func setupViewLayer(view: UIView, cornerRadius: CGFloat, shadowOpacity: Float, shadowRadius: CGFloat, shadowOffset: CGSize, shadowColor: CGColor) {
+        view.layer.cornerRadius = cornerRadius
+        view.layer.shadowOpacity = shadowOpacity
+        view.layer.shadowRadius = shadowRadius
+        view.layer.shadowOffset = shadowOffset
+        view.layer.shadowColor = shadowColor
     }
     
     // MARK: - Table view data source

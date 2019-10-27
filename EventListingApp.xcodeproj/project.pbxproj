@@ -15,8 +15,10 @@
 		CE11B5C6235784A10053D148 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE11B5C4235784A10053D148 /* LaunchScreen.storyboard */; };
 		CE42B54C235A0D6200975AB4 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B54B235A0D6200975AB4 /* ItemTableViewCell.swift */; };
 		CE42B54E235A48A300975AB4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B54D235A48A300975AB4 /* AddEventViewController.swift */; };
+		CE42CAA52365B53100E6C342 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42CAA42365B53100E6C342 /* UserDefault.swift */; };
 		CEA9DBEE235ACBCE006D9D57 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9DBED235ACBCE006D9D57 /* FavouriteViewController.swift */; };
 		CEA9DBF0235AD235006D9D57 /* FavouriteItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9DBEF235AD235006D9D57 /* FavouriteItemTableViewCell.swift */; };
+		CEBA16C92364828200E4D00B /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBA16C82364828200E4D00B /* ColorAssets.xcassets */; };
 		CEE8D7BD23579050005EEC7D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8D7BC23579050005EEC7D /* Event.swift */; };
 		CEE8D7BF23579204005EEC7D /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8D7BE23579204005EEC7D /* EventDetailsViewController.swift */; };
 		CEE8D7C12357A115005EEC7D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8D7C02357A115005EEC7D /* Category.swift */; };
@@ -34,8 +36,10 @@
 		CE11B5C7235784A10053D148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE42B54B235A0D6200975AB4 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		CE42B54D235A48A300975AB4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		CE42CAA42365B53100E6C342 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		CEA9DBED235ACBCE006D9D57 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		CEA9DBEF235AD235006D9D57 /* FavouriteItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteItemTableViewCell.swift; sourceTree = "<group>"; };
+		CEBA16C82364828200E4D00B /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		CEE8D7BC23579050005EEC7D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CEE8D7BE23579204005EEC7D /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		CEE8D7C02357A115005EEC7D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				CEE8D7BC23579050005EEC7D /* Event.swift */,
 				CEE8D7C02357A115005EEC7D /* Category.swift */,
 				CEE8D7C523582397005EEC7D /* EventManager.swift */,
+				CE42CAA42365B53100E6C342 /* UserDefault.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -96,8 +101,9 @@
 			children = (
 				CE11B5B9235784A00053D148 /* AppDelegate.swift */,
 				CE11B5BB235784A00053D148 /* SceneDelegate.swift */,
-				CE11B5C2235784A10053D148 /* Assets.xcassets */,
 				CE11B5C4235784A10053D148 /* LaunchScreen.storyboard */,
+				CE11B5C2235784A10053D148 /* Assets.xcassets */,
+				CEBA16C82364828200E4D00B /* ColorAssets.xcassets */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 			files = (
 				CE11B5C6235784A10053D148 /* LaunchScreen.storyboard in Resources */,
 				CE11B5C3235784A10053D148 /* Assets.xcassets in Resources */,
+				CEBA16C92364828200E4D00B /* ColorAssets.xcassets in Resources */,
 				CE11B5C1235784A00053D148 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +201,7 @@
 				CE11B5BA235784A00053D148 /* AppDelegate.swift in Sources */,
 				CE11B5BC235784A00053D148 /* SceneDelegate.swift in Sources */,
 				CE42B54E235A48A300975AB4 /* AddEventViewController.swift in Sources */,
+				CE42CAA52365B53100E6C342 /* UserDefault.swift in Sources */,
 				CEA9DBEE235ACBCE006D9D57 /* FavouriteViewController.swift in Sources */,
 				CEE8D7C12357A115005EEC7D /* Category.swift in Sources */,
 				CEA9DBF0235AD235006D9D57 /* FavouriteItemTableViewCell.swift in Sources */,
